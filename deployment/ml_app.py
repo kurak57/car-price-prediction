@@ -1,19 +1,7 @@
 import streamlit as st
-import pickle
 import joblib
 import os
 import pandas as pd
-
-# Load pre-trained model
-def load_model(model_file):
-    with open(model_file, 'rb') as file:
-        loaded_model = pickle.load(file)  # Menggunakan pickle.load() untuk memuat model
-    return loaded_model
-
-def load_encoder(encoder_file):
-    with open(encoder_file, 'rb') as file:
-        loaded_encoder = pickle.load(file)  # Menggunakan pickle.load() untuk memuat encoder
-    return loaded_encoder
 
 def encode(df, encoder):
 # define columns to encode
@@ -135,3 +123,4 @@ def run_ml_app():
 # Run the app
 if __name__ == "__main__":
     run_ml_app()
+    
