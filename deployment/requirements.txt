@@ -3,4 +3,4 @@ numpy==1.26.4
 streamlit==1.41.1
 joblib==1.4.2
 scikit-learn==1.2.2
-
+category_encoders==2.6.4
