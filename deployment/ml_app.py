@@ -106,8 +106,10 @@ def run_ml_app():
 
     # Prediction Section
     st.subheader("Prediction Result")
-    model_file = "car_prediction_model.joblib"
-    encoder_file = "loo_encoder.joblib"
+    
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    model_file = os.path.join(base_dir, "car_prediction_model.joblib")
+    encoder_file = os.path.join(base_dir, "loo_encoder.joblib")
 
     # Button to start prediction
     if st.button("Start Prediction"):
